@@ -1,8 +1,8 @@
 // YOUR CODE BELOW
 
-let allTheNums = [1, 2, 3, 4, 5, 6, 7, 8]
+// let allTheNums = [1, 2, 3, 4, 5, 6, 7, 8]
 function veryOddMutant(array) {
-    debugger;
+    
     let count = 0;
     for (i = 0; i<array.length; i++) {
          let curr = array[i];
@@ -14,5 +14,5 @@ function veryOddMutant(array) {
     console.log('allTheNums: ', allTheNums);
     return count;
 }
-let countRemoved = veryOddMutant(allTheNums);
+// let countRemoved = veryOddMutant(allTheNums);
 // console.log('countRemoved:', countRemoved);
