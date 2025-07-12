@@ -1,7 +1,7 @@
 // YOUR CODE BELOW
 let myArray = [10, 20, 30, 40, 50, 60];
 function mySplice(array, start, del=0, value) {
-    debugger;
+    
     let rem=[];
     let nm = array;
     let s = array.length

@@ -6,7 +6,7 @@ function zooInventory(array) {
             let n = [];
             for (let j = 0; j < array[i].length; j++) {
                 if (!Array.isArray(array[i][j])) {
-                    n = array[i][j] + ' the ' + array[i][j + 1][0] + ' is ' + array[i][j + 1][1];
+                    n = array[i][j] + ' the ' + array[i][j + 1][0] + ' is ' + array[i][j + 1][1]+'.';
                 }
             }
             arr.push(n);
