@@ -19,7 +19,44 @@ let tacoCatInc = {
     'treat dust': {cost: 0.1, quantity: 100}
   },
 
-  cash: 0
-};
+  cash: 0,
+  currentInventory: function() {
+    
+    let total=0
+    let keys= Object.keys(this)
+    for (let i=0; i<keys.length; i++) {
+      let akey= keys[i]
+      if(typeof this[akey]=== 'object') {
+        let items = Object.keys(this[akey]) 
+        for (let j=0; j<items.length;j++) {
+          let lo =items[j]
+          
+          total+= (this[akey][lo].cost*this[akey][lo].quantity)
+          
+          
+        }
+      
+      }
+      
 
-// YOUR CODE BELOW
+    }
+    return total;
+  },
+  sale: function(order) {
+
+    debugger;
+    let total=0
+    let amount =0
+    let keys= Object.keys(order)
+    for (let i=0; i<keys.length; i++) {
+      let akey= keys[i];
+
+          let lo =order[akey]
+            amount+= this[akey][lo].cost
+            this[akey][lo].quantity--
+    }
+    this.cash+=amount
+    return amount;
+
+  }
+};
