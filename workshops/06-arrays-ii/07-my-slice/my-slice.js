@@ -4,6 +4,20 @@ function mySlice(originalArray, startIdx=0, endIdx) {
     if (endIdx === undefined) {
         endIdx= originalArray.length}
     if (startIdx>=0) {
+        if (endIdx < 0) {
+        endIdx = originalArray.length + endIdx;
+    
+
+    
+    startIdx = Math.max(0, startIdx);
+    endIdx = Math.min(originalArray.length, endIdx);
+
+    for (let i = startIdx; i < endIdx; i++) {
+        arr.push(originalArray[i]);
+    }
+}
+        
+    else {
         for (let i=0; i<originalArray.length;i++ ) {
         if (i=== startIdx) {
             for (j=i; j<endIdx; j++) {
@@ -11,6 +25,7 @@ function mySlice(originalArray, startIdx=0, endIdx) {
             }
         }
         }
+    }
     }
     else {
             
@@ -35,4 +50,4 @@ function mySlice(originalArray, startIdx=0, endIdx) {
     return arr
 
 }
-console.log(mySlice([1, 2, 3, 4], -2,-1))
+console.log(mySlice(['bagel', 'baguette', 'bialy', 'brioche'], 0, -1))
